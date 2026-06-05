@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.3)
+cmake_minimum_required(VERSION 3.16)
 
 project(Oceanarium)
 
@@ -10,6 +10,9 @@ add_executable(
         src/Aquarium.cpp
         src/Oceanarium.cpp
         src/Fish.cpp
+        src/Worker.cpp
+        src/Worker.cpp
+        include/Worker.h
 )
 
 target_include_directories(Oceanarium PRIVATE include)
