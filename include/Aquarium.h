@@ -1,14 +1,16 @@
 #ifndef AQUARIUM_H
 #define AQUARIUM_H
 
+#include <vector>
+#include "Fish.h"
+
 class Aquarium {
-  int fishCount;
+    std::vector<Fish> fishes;
 
 public:
-  Aquarium();
-
-  void addFish(int count);
-  int getFishCount() const;
+    void addFish(const Fish &fish);
+    int getFishCount() const;
+    const std::vector<Fish> &getFishes() const;
 };
 
 #endif

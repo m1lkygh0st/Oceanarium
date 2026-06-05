@@ -1,3 +1,4 @@
+#include "Fish.h"
 #include "Input.h"
 #include "Oceanarium.h"
 
@@ -24,12 +25,14 @@ int main() {
             if (choice == 1) {
                 Aquarium aquarium;
                 oceanarium.addAquarium(aquarium);
+
                 std::cout << "Aquarium added\n";
             }
 
             else if (choice == 2) {
-                if (oceanarium.getAquariumCount() == 0)
+                if (oceanarium.getAquariumCount() == 0) {
                     throw std::runtime_error("No aquariums available");
+                }
 
                 const auto &aquariums = oceanarium.getAquariums();
                 std::cout << "\nAvailable aquariums:\n";
@@ -37,16 +40,27 @@ int main() {
                     std::cout << (i + 1) << ". Aquarium - " << aquariums[i].getFishCount() << " fish\n";
                 }
 
-                const int aquariumNumber = Input::readInt("\nSelect aquarium number: ");
+                const int aquariumNumber = Input::readInt("Select aquarium number: ");
                 const int index = aquariumNumber - 1;
 
-                if (index < 0 || index >= oceanarium.getAquariumCount())
+                if (index < 0 || index >= oceanarium.getAquariumCount()) {
                     throw std::runtime_error("Invalid aquarium number");
+                }
 
-                const int count = Input::readInt("Fish count to add: ");
-                oceanarium.getAquarium(index).addFish(count);
-                std::cout << "Fish added\n";
+                const std::string species = Input::readLettersOnly("Species: ");
+                const int age = Input::readIntRange("Age: ", 0, 200);
+                const std::string gender = Input::readGender("Gender (male/female): ");
+                const int appetite = Input::readIntRange("Appetite (0-100): ", 0, 100);
+                const int health = Input::readIntRange("Health (0-100): ", 0, 100);
+                const int count = Input::readIntRange("Number of fish to add: ", 1, 1000);
+
+                for (int i = 0; i < count; ++i) {
+                    Fish fish(species, age, gender, appetite, health);
+                    oceanarium.getAquarium(index).addFish(fish);
+                }
+                std::cout << count << " fish added successfully to aquarium " << aquariumNumber << "\n";
             }
+
 
             else if (choice == 3) {
                 const auto &aquariums = oceanarium.getAquariums();
@@ -56,13 +70,27 @@ int main() {
                     continue;
                 }
 
+                std::cout << "\n===== AQUARIUMS =====\n";
+
                 for (size_t i = 0; i < aquariums.size(); i++) {
-                    std::cout << "Aquarium " << (i + 1) << " - " << aquariums[i].getFishCount() << " fish\n";
+                    const auto &fishes = aquariums[i].getFishes();
+                    std::cout << "\nAquarium " << (i + 1) << ":\n";
+
+                    if (fishes.empty()) {
+                        std::cout << "  No fish\n";
+                        continue;
+                    }
+
+                    for (const auto &f: fishes) {
+                        std::cout << "  Species: " << f.getSpecies() << " | Age: " << f.getAge()
+                                  << " | Gender: " << f.getGender() << " | Appetite: " << f.getAppetite()
+                                  << " | Health: " << f.getHealth() << "\n";
+                    }
                 }
             }
 
             else {
-                throw std::runtime_error("Input 0 - 3");
+                throw std::runtime_error("Unknown option");
             }
         }
 

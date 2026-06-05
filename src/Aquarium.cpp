@@ -1,13 +1,7 @@
 #include "Aquarium.h"
-#include <stdexcept>
 
-Aquarium::Aquarium() : fishCount(0) {}
+void Aquarium::addFish(const Fish &fish) { fishes.push_back(fish); }
 
-void Aquarium::addFish(const int count) {
-  if (count <= 0) {
-    throw std::runtime_error("Fish count should be positive");
-  }
-  fishCount += count;
-}
+int Aquarium::getFishCount() const { return static_cast<int>(fishes.size()); }
 
-int Aquarium::getFishCount() const { return fishCount; }
+const std::vector<Fish> &Aquarium::getFishes() const { return fishes; }

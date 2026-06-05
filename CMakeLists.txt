@@ -9,6 +9,7 @@ add_executable(
         src/main.cpp
         src/Aquarium.cpp
         src/Oceanarium.cpp
+        src/Fish.cpp
 )
 
 target_include_directories(Oceanarium PRIVATE include)
