@@ -1,5 +1,6 @@
 #include "Worker.h"
 #include <iostream>
+
 Worker::Worker(std::string name, const int age, std::string gender)
     : name(std::move(name)), age(age), gender(std::move(gender)), active(true),
       breakDays(0) {}

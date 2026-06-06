@@ -8,7 +8,6 @@ protected:
   std::string species;
   int age;
   std::string gender;
-
   int appetite;
   int health;
   bool alive;
@@ -27,7 +26,6 @@ public:
 
   void feed(int food);
   void tickDay();
-
   virtual void printInfo() const;
 };
 

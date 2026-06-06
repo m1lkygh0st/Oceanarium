@@ -16,7 +16,6 @@ bool Fish::isAlive() const { return alive; }
 void Fish::feed(const int food) {
   if (!alive)
     return;
-
   appetite += food;
   if (appetite > 100)
     appetite = 100;
@@ -27,12 +26,10 @@ void Fish::tickDay() {
     return;
 
   appetite -= 1;
-
   if (appetite <= 0) {
     appetite = 0;
     health -= 5;
   }
-
   if (health <= 0) {
     health = 0;
     alive = false;

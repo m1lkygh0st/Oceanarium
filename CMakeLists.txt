@@ -11,8 +11,6 @@ add_executable(
         src/Oceanarium.cpp
         src/Fish.cpp
         src/Worker.cpp
-        src/Worker.cpp
-        include/Worker.h
         src/Admin.cpp
 )
 

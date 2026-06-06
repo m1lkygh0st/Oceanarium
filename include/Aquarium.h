@@ -16,15 +16,15 @@ public:
 
   void addFish(std::unique_ptr<Fish> fish);
   void addWorker(std::unique_ptr<Worker> worker);
+
   [[nodiscard]] Fish &getFish(int index) const;
   [[nodiscard]] int getFishCount() const;
   [[nodiscard]] int getWorkerCount() const;
   [[nodiscard]] int getNumber() const;
-
   [[nodiscard]] Worker &getWorker(int index) const;
 
   void feedFishByWorker(const Worker &worker) const;
-  void tickDay() const;
+  void tickDay();
   void printInfo() const;
 };
 

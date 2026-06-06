@@ -30,25 +30,19 @@ void Aquarium::feedFishByWorker(const Worker &worker) const {
   }
 }
 
-void Aquarium::tickDay() const {
-  for (auto &fish : fishes) {
+void Aquarium::tickDay() {
+  for (auto &fish : fishes)
     fish->tickDay();
-  }
-  for (auto &worker : workers) {
-    worker->tickDay();
-  }
+  for (auto &worker : workers)
+    worker->tickDay(); // уменьшаем breakDays
 }
 
 void Aquarium::printInfo() const {
   std::cout << "\nAquarium #" << aquariumNumber << "\n";
-
   std::cout << "Fishes:\n";
-  for (const auto &f : fishes) {
+  for (const auto &f : fishes)
     f->printInfo();
-  }
-
   std::cout << "Workers:\n";
-  for (const auto &w : workers) {
+  for (const auto &w : workers)
     w->printInfo();
-  }
 }

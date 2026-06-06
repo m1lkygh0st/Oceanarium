@@ -22,7 +22,6 @@ public:
   [[nodiscard]] bool isActive() const;
 
   void setActive(bool status);
-
   void setBreak(int days);
   void tickDay();
 

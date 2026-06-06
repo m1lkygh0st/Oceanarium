@@ -12,7 +12,7 @@ class Oceanarium {
   std::thread timeThread;
   std::atomic<bool> running{false};
 
-  void timeLoop() const;
+  void timeLoop();
 
 public:
   void addAquarium(std::unique_ptr<Aquarium> aquarium);

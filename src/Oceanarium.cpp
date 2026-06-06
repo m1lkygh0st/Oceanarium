@@ -1,6 +1,5 @@
 #include "Oceanarium.h"
 #include <chrono>
-#include <iostream>
 
 void Oceanarium::addAquarium(std::unique_ptr<Aquarium> aquarium) {
   aquariums.push_back(std::move(aquarium));
@@ -31,16 +30,20 @@ void Oceanarium::stopSimulation() {
 
 Oceanarium::~Oceanarium() { stopSimulation(); }
 
-void Oceanarium::timeLoop() const {
+void Oceanarium::timeLoop() {
   using namespace std::chrono_literals;
 
   while (running) {
     std::this_thread::sleep_for(10s);
 
-    for (auto &aq : aquariums) {
-      aq->tickDay();
+    for (auto &aquarium : aquariums) {
+      aquarium->tickDay();
     }
 
-    std::cout << "\n[SIMULATION] 10 seconds passed: fish appetite decreased!\n";
+    for (const auto &aquarium : aquariums) {
+      for (int i = 0; i < aquarium->getWorkerCount(); ++i) {
+        aquarium->getWorker(i).printInfo();
+      }
+    }
   }
 }
