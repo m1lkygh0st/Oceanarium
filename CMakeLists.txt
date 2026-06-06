@@ -13,6 +13,7 @@ add_executable(
         src/Worker.cpp
         src/Worker.cpp
         include/Worker.h
+        src/Admin.cpp
 )
 
 target_include_directories(Oceanarium PRIVATE include)

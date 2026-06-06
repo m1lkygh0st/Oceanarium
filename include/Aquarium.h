@@ -1,35 +1,33 @@
 #ifndef AQUARIUM_H
 #define AQUARIUM_H
 
+#include "Fish.h"
+#include "Worker.h"
 #include <memory>
 #include <vector>
 
-#include "Fish.h"
-#include "Worker.h"
-
 class Aquarium {
-    int aquariumNumber;
-    std::vector<std::unique_ptr<Fish>> fishes;
-    std::vector<Worker> workers;
+  int aquariumNumber;
+  std::vector<std::unique_ptr<Fish>> fishes;
+  std::vector<std::unique_ptr<Worker>> workers;
 
 public:
-    explicit Aquarium(int number);
+  explicit Aquarium(int number);
 
-    int getNumber() const;
-    void addFish(std::unique_ptr<Fish> fish);
-    int getFishCount() const;
+  [[nodiscard]] int getNumber() const;
+  void addFish(std::unique_ptr<Fish> fish);
+  [[nodiscard]] int getFishCount() const;
+  [[nodiscard]] Fish &getFish(int index) const;
+  [[nodiscard]] const std::vector<std::unique_ptr<Fish>> &getFishes() const;
 
-    Fish &getFish(int index) const;
-    const std::vector<std::unique_ptr<Fish>> &getFishes() const;
+  void addWorker(std::unique_ptr<Worker> worker);
+  [[nodiscard]] int getWorkerCount() const;
+  [[nodiscard]] Worker &getWorker(int index) const;
+  [[nodiscard]] const std::vector<std::unique_ptr<Worker>> &getWorkers() const;
 
-    void addWorker(const Worker &worker);
-    int getWorkerCount() const;
-    Worker &getWorker(int index);
-    const std::vector<Worker> &getWorkers() const;
+  void feedFishByWorker(const Worker &worker) const;
 
-    void feedFishByWorker(const Worker &worker) const;
-
-    void printInfo() const;
+  void printInfo() const;
 };
 
 #endif

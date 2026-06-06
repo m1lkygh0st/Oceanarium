@@ -5,8 +5,9 @@
 
 class Cardinalfish : public Fish {
 public:
-  Cardinalfish(const int age, const std::string &gender, const int appetite, const int health) :
-      Fish("Cardinalfish", age, gender, appetite, health) {}
+  Cardinalfish(const int age, const std::string &gender, const int appetite,
+               const int health)
+      : Fish("Cardinalfish", age, gender, appetite, health) {}
 };
 
 #endif
