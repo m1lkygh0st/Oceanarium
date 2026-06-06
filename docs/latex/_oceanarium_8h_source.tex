@@ -1,0 +1,36 @@
+\doxysection{Oceanarium.\+h}
+\hypertarget{_oceanarium_8h_source}{}\label{_oceanarium_8h_source}\index{include/Oceanarium.h@{include/Oceanarium.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Aquarium.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_oceanarium}{Oceanarium}}\ \{}
+\DoxyCodeLine{00017\ \ \ std::vector<std::unique\_ptr<Aquarium>>\ aquariums;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ std::thread\ timeThread;}
+\DoxyCodeLine{00020\ \ \ std::atomic<bool>\ running\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_oceanarium_a916caf01e672a62b0e2a32a45d47474f}{timeLoop}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_oceanarium_ac569a3c66e85460e8af37af8dca58b84}{addAquarium}}(std::unique\_ptr<Aquarium>\ aquarium);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_oceanarium_aa8a5b8371369743dd7128fe801390926}{getAquariumCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{class_aquarium}{Aquarium}}\ \&\doxymbox{\hyperlink{class_oceanarium_a2eeab27e95a4e7efed7a2648172d429e}{getAquarium}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_oceanarium_a59815788b4a131749ba0b7f04658a1cc}{startSimulation}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_oceanarium_a7c5e4cff7137a3e97da9fe340b8d6e3c}{stopSimulation}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \doxymbox{\hyperlink{class_oceanarium}{\string~Oceanarium}}();}
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

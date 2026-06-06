@@ -1,0 +1,122 @@
+\doxysection{Worker Class Reference}
+\hypertarget{class_worker}{}\label{class_worker}\index{Worker@{Worker}}
+
+
+Базовый работник океанариума.  
+
+
+
+
+{\ttfamily \+\#include $<$Worker.\+h$>$}
+
+
+
+Inheritance diagram for Worker:\+
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_worker_a777e440bc15ed84a97202cb29c336490}\label{class_worker_a777e440bc15ed84a97202cb29c336490} 
+{\bfseries Worker} (std::\+string \doxymbox{\hyperlink{class_worker_a9d8626364fc2e5353712381175347144}{name}}, int \doxymbox{\hyperlink{class_worker_ad622bf83a52f489495b03bdf13feb33d}{age}}, std::\+string \doxymbox{\hyperlink{class_worker_ad3df598b7c7134e95928fcd1711783eb}{gender}})
+\begin{DoxyCompactList}\small\item\em Конструктор работника \end{DoxyCompactList}\item 
+\Hypertarget{class_worker_ada7f4e9e66689c295fb5a0ff52816003}\label{class_worker_ada7f4e9e66689c295fb5a0ff52816003} 
+const std::\+string \& {\bfseries get\+Name} () const
+\item 
+\Hypertarget{class_worker_a3e45e68766cadb73aa597d4aa55174d9}\label{class_worker_a3e45e68766cadb73aa597d4aa55174d9} 
+int {\bfseries get\+Age} () const
+\item 
+\Hypertarget{class_worker_a5b458324c7cc315a54ed792c6abb7b65}\label{class_worker_a5b458324c7cc315a54ed792c6abb7b65} 
+const std::\+string \& {\bfseries get\+Gender} () const
+\item 
+\Hypertarget{class_worker_a59b1b4769ad7cc740b051e53c986b725}\label{class_worker_a59b1b4769ad7cc740b051e53c986b725} 
+bool {\bfseries is\+Active} () const
+\item 
+\Hypertarget{class_worker_a5a49c6f22d337f21e35034e54ee9b173}\label{class_worker_a5a49c6f22d337f21e35034e54ee9b173} 
+void {\bfseries set\+Active} (bool status)
+\begin{DoxyCompactList}\small\item\em Установить активность \end{DoxyCompactList}\item 
+\Hypertarget{class_worker_a882b8af9ca2bb1063f1004aebd540ca8}\label{class_worker_a882b8af9ca2bb1063f1004aebd540ca8} 
+void {\bfseries set\+Break} (int days)
+\begin{DoxyCompactList}\small\item\em Назначить отпуск \end{DoxyCompactList}\item 
+\Hypertarget{class_worker_ada62eb1a94689cd0c5dea768a5327810}\label{class_worker_ada62eb1a94689cd0c5dea768a5327810} 
+void {\bfseries tick\+Day} ()
+\begin{DoxyCompactList}\small\item\em Симуляция дня \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_worker_a080cc99f174729b04789be91f71786e3}{print\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Вывод информации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_worker_a9d8626364fc2e5353712381175347144}{name}}
+\item 
+int \doxymbox{\hyperlink{class_worker_ad622bf83a52f489495b03bdf13feb33d}{age}}
+\item 
+std::\+string \doxymbox{\hyperlink{class_worker_ad3df598b7c7134e95928fcd1711783eb}{gender}}
+\item 
+bool \doxymbox{\hyperlink{class_worker_a7449d9b016093aea6260bb292d791a21}{active}}
+\item 
+int \doxymbox{\hyperlink{class_worker_a2f4e152088c0e8eddff3e2aab3bd3bd1}{break\+Days}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый работник океанариума. 
+
+Может кормить рыб и уходить в отпуск (break). 
+
+\label{doc-func-members}
+\Hypertarget{class_worker_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_worker_a080cc99f174729b04789be91f71786e3}\index{Worker@{Worker}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily \label{class_worker_a080cc99f174729b04789be91f71786e3} 
+void Worker::\+print\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Вывод информации 
+
+
+
+Reimplemented in \doxymbox{\hyperlink{class_admin_a7b266ab3b1206ba00c4371ea8901ad29}{Admin}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_worker_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_worker_a7449d9b016093aea6260bb292d791a21}\index{Worker@{Worker}!active@{active}}
+\index{active@{active}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily \label{class_worker_a7449d9b016093aea6260bb292d791a21} 
+bool Worker::\+active\hspace{0.3cm}{\ttfamily [protected]}}
+
+Активен ли \Hypertarget{class_worker_ad622bf83a52f489495b03bdf13feb33d}\index{Worker@{Worker}!age@{age}}
+\index{age@{age}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{age}{age}}
+{\footnotesize\ttfamily \label{class_worker_ad622bf83a52f489495b03bdf13feb33d} 
+int Worker::\+age\hspace{0.3cm}{\ttfamily [protected]}}
+
+Возраст \Hypertarget{class_worker_a2f4e152088c0e8eddff3e2aab3bd3bd1}\index{Worker@{Worker}!breakDays@{breakDays}}
+\index{breakDays@{breakDays}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{breakDays}{breakDays}}
+{\footnotesize\ttfamily \label{class_worker_a2f4e152088c0e8eddff3e2aab3bd3bd1} 
+int Worker::\+break\+Days\hspace{0.3cm}{\ttfamily [protected]}}
+
+Остаток дней отдыха \Hypertarget{class_worker_ad3df598b7c7134e95928fcd1711783eb}\index{Worker@{Worker}!gender@{gender}}
+\index{gender@{gender}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{gender}{gender}}
+{\footnotesize\ttfamily \label{class_worker_ad3df598b7c7134e95928fcd1711783eb} 
+std::\+string Worker::\+gender\hspace{0.3cm}{\ttfamily [protected]}}
+
+Пол \Hypertarget{class_worker_a9d8626364fc2e5353712381175347144}\index{Worker@{Worker}!name@{name}}
+\index{name@{name}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_worker_a9d8626364fc2e5353712381175347144} 
+std::\+string Worker::\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+Имя 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Worker.\+h\item 
+src/\+Worker.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\doxysection{Fish Class Reference}
+\hypertarget{class_fish}{}\label{class_fish}\index{Fish@{Fish}}
+
+
+Базовый класс рыбы в океанариуме.  
+
+
+
+
+{\ttfamily \+\#include $<$Fish.\+h$>$}
+
+
+
+Inheritance diagram for Fish:\+
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_fish_a23437ef296f03e07b61fc3fc5f179c63}\label{class_fish_a23437ef296f03e07b61fc3fc5f179c63} 
+{\bfseries Fish} (std::\+string \doxymbox{\hyperlink{class_fish_a7265fba3185099ff24c32066155620db}{species}}, int \doxymbox{\hyperlink{class_fish_a7dc6e636eca8b9001992b87fa6105b16}{age}}, std::\+string \doxymbox{\hyperlink{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}{gender}}, int \doxymbox{\hyperlink{class_fish_ad6b31041de0b04ed439bb5287094e7b8}{appetite}}, int \doxymbox{\hyperlink{class_fish_a35a62c69db5913fac4c921be7b0b0b10}{health}})
+\begin{DoxyCompactList}\small\item\em Конструктор рыбы \end{DoxyCompactList}\item 
+\Hypertarget{class_fish_a489d84d1a4fece9bbf86f2f18c3bc92f}\label{class_fish_a489d84d1a4fece9bbf86f2f18c3bc92f} 
+const std::\+string \& {\bfseries get\+Species} () const
+\item 
+\Hypertarget{class_fish_afc8129dfdda2fe83f83a0482423b9a94}\label{class_fish_afc8129dfdda2fe83f83a0482423b9a94} 
+int {\bfseries get\+Age} () const
+\item 
+\Hypertarget{class_fish_afd55dbc189115d9bd8ee4cd8a777ca19}\label{class_fish_afd55dbc189115d9bd8ee4cd8a777ca19} 
+const std::\+string \& {\bfseries get\+Gender} () const
+\item 
+\Hypertarget{class_fish_ad1bac136b75d45dce565b5167c098afd}\label{class_fish_ad1bac136b75d45dce565b5167c098afd} 
+int {\bfseries get\+Appetite} () const
+\item 
+\Hypertarget{class_fish_a71c2be6d13b76cfe1d6871856584c16a}\label{class_fish_a71c2be6d13b76cfe1d6871856584c16a} 
+int {\bfseries get\+Health} () const
+\item 
+\Hypertarget{class_fish_aa331ee12b69d1b9db87640919cbe72fa}\label{class_fish_aa331ee12b69d1b9db87640919cbe72fa} 
+bool {\bfseries is\+Alive} () const
+\item 
+void \doxymbox{\hyperlink{class_fish_addda38c89fe03c8a486dc71d58f8c535}{feed}} (int food)
+\begin{DoxyCompactList}\small\item\em Кормление рыбы \end{DoxyCompactList}\item 
+\Hypertarget{class_fish_ae0d7172f8e59a8503a4d1509b859c910}\label{class_fish_ae0d7172f8e59a8503a4d1509b859c910} 
+void {\bfseries tick\+Day} ()
+\begin{DoxyCompactList}\small\item\em Симуляция одного дня жизни рыбы \end{DoxyCompactList}\item 
+\Hypertarget{class_fish_a79cc9fb336fec68ca1c775fea16b27bb}\label{class_fish_a79cc9fb336fec68ca1c775fea16b27bb} 
+virtual void {\bfseries print\+Info} () const
+\begin{DoxyCompactList}\small\item\em Вывод информации о рыбе \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_fish_a7265fba3185099ff24c32066155620db}{species}}
+\item 
+int \doxymbox{\hyperlink{class_fish_a7dc6e636eca8b9001992b87fa6105b16}{age}}
+\item 
+std::\+string \doxymbox{\hyperlink{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}{gender}}
+\item 
+int \doxymbox{\hyperlink{class_fish_ad6b31041de0b04ed439bb5287094e7b8}{appetite}}
+\item 
+int \doxymbox{\hyperlink{class_fish_a35a62c69db5913fac4c921be7b0b0b10}{health}}
+\item 
+bool \doxymbox{\hyperlink{class_fish_a08a9799385744c62cf2da6f956407ce7}{alive}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс рыбы в океанариуме. 
+
+Содержит базовые характеристики всех рыб:\+ возраст, пол, аппетит, здоровье и статус жизни. 
+
+\label{doc-func-members}
+\Hypertarget{class_fish_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fish_addda38c89fe03c8a486dc71d58f8c535}\index{Fish@{Fish}!feed@{feed}}
+\index{feed@{feed}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{feed()}{feed()}}
+{\footnotesize\ttfamily \label{class_fish_addda38c89fe03c8a486dc71d58f8c535} 
+void Fish::\+feed (\begin{DoxyParamCaption}\item[{int}]{food}{}\end{DoxyParamCaption})}
+
+
+
+Кормление рыбы 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food} & количество еды \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_fish_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_fish_a7dc6e636eca8b9001992b87fa6105b16}\index{Fish@{Fish}!age@{age}}
+\index{age@{age}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{age}{age}}
+{\footnotesize\ttfamily \label{class_fish_a7dc6e636eca8b9001992b87fa6105b16} 
+int Fish::\+age\hspace{0.3cm}{\ttfamily [protected]}}
+
+Возраст \Hypertarget{class_fish_a08a9799385744c62cf2da6f956407ce7}\index{Fish@{Fish}!alive@{alive}}
+\index{alive@{alive}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{alive}{alive}}
+{\footnotesize\ttfamily \label{class_fish_a08a9799385744c62cf2da6f956407ce7} 
+bool Fish::\+alive\hspace{0.3cm}{\ttfamily [protected]}}
+
+Жива ли рыба \Hypertarget{class_fish_ad6b31041de0b04ed439bb5287094e7b8}\index{Fish@{Fish}!appetite@{appetite}}
+\index{appetite@{appetite}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{appetite}{appetite}}
+{\footnotesize\ttfamily \label{class_fish_ad6b31041de0b04ed439bb5287094e7b8} 
+int Fish::\+appetite\hspace{0.3cm}{\ttfamily [protected]}}
+
+Аппетит (0-\/100) \Hypertarget{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}\index{Fish@{Fish}!gender@{gender}}
+\index{gender@{gender}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{gender}{gender}}
+{\footnotesize\ttfamily \label{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5} 
+std::\+string Fish::\+gender\hspace{0.3cm}{\ttfamily [protected]}}
+
+Пол \Hypertarget{class_fish_a35a62c69db5913fac4c921be7b0b0b10}\index{Fish@{Fish}!health@{health}}
+\index{health@{health}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily \label{class_fish_a35a62c69db5913fac4c921be7b0b0b10} 
+int Fish::\+health\hspace{0.3cm}{\ttfamily [protected]}}
+
+Здоровье (0-\/100) \Hypertarget{class_fish_a7265fba3185099ff24c32066155620db}\index{Fish@{Fish}!species@{species}}
+\index{species@{species}!Fish@{Fish}}
+\doxysubsubsection{\texorpdfstring{species}{species}}
+{\footnotesize\ttfamily \label{class_fish_a7265fba3185099ff24c32066155620db} 
+std::\+string Fish::\+species\hspace{0.3cm}{\ttfamily [protected]}}
+
+Вид рыбы 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Fish.\+h\item 
+src/\+Fish.\+cpp\end{DoxyCompactItemize}

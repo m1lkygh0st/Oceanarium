@@ -1,0 +1,173 @@
+\doxysection{Aquarium Class Reference}
+\hypertarget{class_aquarium}{}\label{class_aquarium}\index{Aquarium@{Aquarium}}
+
+
+Аквариум, содержащий рыб и работников.  
+
+
+
+
+{\ttfamily \+\#include $<$Aquarium.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_aquarium_a07ca7634c9379132d3ba373d5040f953}{Aquarium}} (int number)
+\begin{DoxyCompactList}\small\item\em Конструктор аквариума \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_aquarium_a9ba05e23707c80e103f54708b9c2873c}{add\+Fish}} (std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_fish}{Fish}} $>$ fish)
+\begin{DoxyCompactList}\small\item\em Добавить рыбу \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_aquarium_a09e35948a8e29183cc2b7389d7a95100}{add\+Worker}} (std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_worker}{Worker}} $>$ worker)
+\begin{DoxyCompactList}\small\item\em Добавить работника \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_fish}{Fish}} \& \doxymbox{\hyperlink{class_aquarium_a944290bc6b7204ef4b322e1a6cf9631f}{get\+Fish}} (int index) const
+\begin{DoxyCompactList}\small\item\em Получить рыбу по индексу \end{DoxyCompactList}\item 
+\Hypertarget{class_aquarium_a992173cc328b04347a0342b07147ff6b}\label{class_aquarium_a992173cc328b04347a0342b07147ff6b} 
+int {\bfseries get\+Fish\+Count} () const
+\begin{DoxyCompactList}\small\item\em Количество рыб \end{DoxyCompactList}\item 
+\Hypertarget{class_aquarium_ad514f539d55673cee17a5b44ccf2b6e4}\label{class_aquarium_ad514f539d55673cee17a5b44ccf2b6e4} 
+int {\bfseries get\+Worker\+Count} () const
+\begin{DoxyCompactList}\small\item\em Количество работников \end{DoxyCompactList}\item 
+\Hypertarget{class_aquarium_aa0feeb8e3110a432e7bcb4e33d051162}\label{class_aquarium_aa0feeb8e3110a432e7bcb4e33d051162} 
+int {\bfseries get\+Number} () const
+\begin{DoxyCompactList}\small\item\em Номер аквариума \end{DoxyCompactList}\item 
+\Hypertarget{class_aquarium_aaf62df5b11c104b692cadd67939bd60e}\label{class_aquarium_aaf62df5b11c104b692cadd67939bd60e} 
+\doxymbox{\hyperlink{class_worker}{Worker}} \& {\bfseries get\+Worker} (int index) const
+\begin{DoxyCompactList}\small\item\em Получить работника по индексу \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_aquarium_ae8bc75b49c97b17b6438e22b56c105d3}{feed\+Fish\+By\+Worker}} (const \doxymbox{\hyperlink{class_worker}{Worker}} \&worker) const
+\begin{DoxyCompactList}\small\item\em Кормление рыб работником \end{DoxyCompactList}\item 
+\Hypertarget{class_aquarium_ab97f530843379b7ebc708af21705f4bb}\label{class_aquarium_ab97f530843379b7ebc708af21705f4bb} 
+void {\bfseries tick\+Day} ()
+\begin{DoxyCompactList}\small\item\em Симуляция одного дня \end{DoxyCompactList}\item 
+\Hypertarget{class_aquarium_ad04bed9dae55a10ec50bca0998b1beb5}\label{class_aquarium_ad04bed9dae55a10ec50bca0998b1beb5} 
+void {\bfseries print\+Info} () const
+\begin{DoxyCompactList}\small\item\em Вывод информации об аквариуме \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_aquarium_a3c16305218a50e217d6ef82a0487c0c3}{aquarium\+Number}}
+\item 
+std::\+vector$<$ std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_fish}{Fish}} $>$ $>$ \doxymbox{\hyperlink{class_aquarium_aa8c4983eb0d525030589dd50ea4fa897}{fishes}}
+\item 
+std::\+vector$<$ std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_worker}{Worker}} $>$ $>$ \doxymbox{\hyperlink{class_aquarium_a52fdc668066c6e43497ae184e1bfcbf6}{workers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Аквариум, содержащий рыб и работников. 
+
+Отвечает за хранение и управление объектами внутри себя. 
+
+\label{doc-constructors}
+\Hypertarget{class_aquarium_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_aquarium_a07ca7634c9379132d3ba373d5040f953}\index{Aquarium@{Aquarium}!Aquarium@{Aquarium}}
+\index{Aquarium@{Aquarium}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{Aquarium()}{Aquarium()}}
+{\footnotesize\ttfamily \label{class_aquarium_a07ca7634c9379132d3ba373d5040f953} 
+Aquarium::\+\+Aquarium (\begin{DoxyParamCaption}\item[{int}]{number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор аквариума 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Номер аквариума \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_aquarium_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_aquarium_a9ba05e23707c80e103f54708b9c2873c}\index{Aquarium@{Aquarium}!addFish@{addFish}}
+\index{addFish@{addFish}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{addFish()}{addFish()}}
+{\footnotesize\ttfamily \label{class_aquarium_a9ba05e23707c80e103f54708b9c2873c} 
+void Aquarium::\+add\+Fish (\begin{DoxyParamCaption}\item[{std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_fish}{Fish}} $>$}]{fish}{}\end{DoxyParamCaption})}
+
+
+
+Добавить рыбу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fish} & Указатель на рыбу \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_aquarium_a09e35948a8e29183cc2b7389d7a95100}\index{Aquarium@{Aquarium}!addWorker@{addWorker}}
+\index{addWorker@{addWorker}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{addWorker()}{addWorker()}}
+{\footnotesize\ttfamily \label{class_aquarium_a09e35948a8e29183cc2b7389d7a95100} 
+void Aquarium::\+add\+Worker (\begin{DoxyParamCaption}\item[{std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_worker}{Worker}} $>$}]{worker}{}\end{DoxyParamCaption})}
+
+
+
+Добавить работника 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & Указатель на работника \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_aquarium_ae8bc75b49c97b17b6438e22b56c105d3}\index{Aquarium@{Aquarium}!feedFishByWorker@{feedFishByWorker}}
+\index{feedFishByWorker@{feedFishByWorker}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{feedFishByWorker()}{feedFishByWorker()}}
+{\footnotesize\ttfamily \label{class_aquarium_ae8bc75b49c97b17b6438e22b56c105d3} 
+void Aquarium::\+feed\+Fish\+By\+Worker (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_worker}{Worker}} \&}]{worker}{}\end{DoxyParamCaption}) const}
+
+
+
+Кормление рыб работником 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & Работник \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_aquarium_a944290bc6b7204ef4b322e1a6cf9631f}\index{Aquarium@{Aquarium}!getFish@{getFish}}
+\index{getFish@{getFish}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{getFish()}{getFish()}}
+{\footnotesize\ttfamily \label{class_aquarium_a944290bc6b7204ef4b322e1a6cf9631f} 
+\doxymbox{\hyperlink{class_fish}{Fish}} \& Aquarium::\+get\+Fish (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить рыбу по индексу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на рыбу 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_aquarium_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_aquarium_a3c16305218a50e217d6ef82a0487c0c3}\index{Aquarium@{Aquarium}!aquariumNumber@{aquariumNumber}}
+\index{aquariumNumber@{aquariumNumber}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{aquariumNumber}{aquariumNumber}}
+{\footnotesize\ttfamily \label{class_aquarium_a3c16305218a50e217d6ef82a0487c0c3} 
+int Aquarium::\+aquarium\+Number\hspace{0.3cm}{\ttfamily [private]}}
+
+Номер аквариума \Hypertarget{class_aquarium_aa8c4983eb0d525030589dd50ea4fa897}\index{Aquarium@{Aquarium}!fishes@{fishes}}
+\index{fishes@{fishes}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{fishes}{fishes}}
+{\footnotesize\ttfamily \label{class_aquarium_aa8c4983eb0d525030589dd50ea4fa897} 
+std::\+vector$<$std::\+unique\+\_\+ptr$<$\doxymbox{\hyperlink{class_fish}{Fish}}$>$ $>$ Aquarium::\+fishes\hspace{0.3cm}{\ttfamily [private]}}
+
+Рыбы \Hypertarget{class_aquarium_a52fdc668066c6e43497ae184e1bfcbf6}\index{Aquarium@{Aquarium}!workers@{workers}}
+\index{workers@{workers}!Aquarium@{Aquarium}}
+\doxysubsubsection{\texorpdfstring{workers}{workers}}
+{\footnotesize\ttfamily \label{class_aquarium_a52fdc668066c6e43497ae184e1bfcbf6} 
+std::\+vector$<$std::\+unique\+\_\+ptr$<$\doxymbox{\hyperlink{class_worker}{Worker}}$>$ $>$ Aquarium::\+workers\hspace{0.3cm}{\ttfamily [private]}}
+
+Работники 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Aquarium.\+h\item 
+src/\+Aquarium.\+cpp\end{DoxyCompactItemize}

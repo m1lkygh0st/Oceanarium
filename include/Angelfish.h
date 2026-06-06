@@ -3,10 +3,20 @@
 
 #include "Fish.h"
 
+/**
+ * @class Angelfish
+ * @brief Вид рыбы — скалярия.
+ */
 class Angelfish : public Fish {
 public:
-  Angelfish(const int age, const std::string &gender, const int appetite,
-            const int health)
+  /**
+   * @brief Конструктор скалярии
+   * @param age Возраст
+   * @param gender Пол
+   * @param appetite Аппетит
+   * @param health Здоровье
+   */
+  Angelfish(int age, const std::string &gender, int appetite, int health)
       : Fish("Angelfish", age, gender, appetite, health) {}
 };
 

@@ -1,0 +1,99 @@
+\doxysection{Cardinalfish Class Reference}
+\hypertarget{class_cardinalfish}{}\label{class_cardinalfish}\index{Cardinalfish@{Cardinalfish}}
+
+
+Рыба — кардинал.  
+
+
+
+
+{\ttfamily \+\#include $<$Cardinalfish.\+h$>$}
+
+
+
+Inheritance diagram for Cardinalfish:\+
+% FIG 0
+
+
+Collaboration diagram for Cardinalfish:\+
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cardinalfish_a195beb5ad12d45bb0975c930c93de136}{Cardinalfish}} (const int \doxymbox{\hyperlink{class_fish_a7dc6e636eca8b9001992b87fa6105b16}{age}}, const std::\+string \&\doxymbox{\hyperlink{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}{gender}}, const int \doxymbox{\hyperlink{class_fish_ad6b31041de0b04ed439bb5287094e7b8}{appetite}}, const int \doxymbox{\hyperlink{class_fish_a35a62c69db5913fac4c921be7b0b0b10}{health}})
+\begin{DoxyCompactList}\small\item\em Конструктор рыбы кардинала \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_fish}{Fish}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Fish} (std::\+string \doxymbox{\hyperlink{class_fish_a7265fba3185099ff24c32066155620db}{species}}, int \doxymbox{\hyperlink{class_fish_a7dc6e636eca8b9001992b87fa6105b16}{age}}, std::\+string \doxymbox{\hyperlink{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}{gender}}, int \doxymbox{\hyperlink{class_fish_ad6b31041de0b04ed439bb5287094e7b8}{appetite}}, int \doxymbox{\hyperlink{class_fish_a35a62c69db5913fac4c921be7b0b0b10}{health}})
+\begin{DoxyCompactList}\small\item\em Конструктор рыбы \end{DoxyCompactList}\item 
+const std::\+string \& {\bfseries get\+Species} () const
+\item 
+int {\bfseries get\+Age} () const
+\item 
+const std::\+string \& {\bfseries get\+Gender} () const
+\item 
+int {\bfseries get\+Appetite} () const
+\item 
+int {\bfseries get\+Health} () const
+\item 
+bool {\bfseries is\+Alive} () const
+\item 
+void \doxymbox{\hyperlink{class_fish_addda38c89fe03c8a486dc71d58f8c535}{feed}} (int food)
+\begin{DoxyCompactList}\small\item\em Кормление рыбы \end{DoxyCompactList}\item 
+void {\bfseries tick\+Day} ()
+\begin{DoxyCompactList}\small\item\em Симуляция одного дня жизни рыбы \end{DoxyCompactList}\item 
+virtual void {\bfseries print\+Info} () const
+\begin{DoxyCompactList}\small\item\em Вывод информации о рыбе \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_fish}{Fish}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_fish_a7265fba3185099ff24c32066155620db}{species}}
+\item 
+int \doxymbox{\hyperlink{class_fish_a7dc6e636eca8b9001992b87fa6105b16}{age}}
+\item 
+std::\+string \doxymbox{\hyperlink{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}{gender}}
+\item 
+int \doxymbox{\hyperlink{class_fish_ad6b31041de0b04ed439bb5287094e7b8}{appetite}}
+\item 
+int \doxymbox{\hyperlink{class_fish_a35a62c69db5913fac4c921be7b0b0b10}{health}}
+\item 
+bool \doxymbox{\hyperlink{class_fish_a08a9799385744c62cf2da6f956407ce7}{alive}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Рыба — кардинал. 
+
+Наследуется от базового класса \doxylink{class_fish}{Fish}. Имеет стандартные характеристики:\+ возраст, пол, аппетит, здоровье. 
+
+\label{doc-constructors}
+\Hypertarget{class_cardinalfish_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cardinalfish_a195beb5ad12d45bb0975c930c93de136}\index{Cardinalfish@{Cardinalfish}!Cardinalfish@{Cardinalfish}}
+\index{Cardinalfish@{Cardinalfish}!Cardinalfish@{Cardinalfish}}
+\doxysubsubsection{\texorpdfstring{Cardinalfish()}{Cardinalfish()}}
+{\footnotesize\ttfamily \label{class_cardinalfish_a195beb5ad12d45bb0975c930c93de136} 
+Cardinalfish::\+\+Cardinalfish (\begin{DoxyParamCaption}\item[{const int}]{age}{, }\item[{const std::\+string \&}]{gender}{, }\item[{const int}]{appetite}{, }\item[{const int}]{health}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор рыбы кардинала 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_fish_a7dc6e636eca8b9001992b87fa6105b16}{age}} & Возраст рыбы \\
+\hline
+{\em \doxylink{class_fish_a014c0a2d9003fc6b14b3323ff3a3efb5}{gender}} & Пол рыбы ("{}male"{}/\+"{}female"{}) \\
+\hline
+{\em \doxylink{class_fish_ad6b31041de0b04ed439bb5287094e7b8}{appetite}} & Аппетит (0-\/100) \\
+\hline
+{\em \doxylink{class_fish_a35a62c69db5913fac4c921be7b0b0b10}{health}} & Здоровье (0-\/100)\\
+\hline
+\end{DoxyParams}
+Вызывает конструктор базового класса \doxylink{class_fish}{Fish} с видом "{}\+Cardinalfish"{}. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Cardinalfish.\+h\end{DoxyCompactItemize}

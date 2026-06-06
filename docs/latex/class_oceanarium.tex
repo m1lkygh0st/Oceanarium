@@ -1,0 +1,58 @@
+\doxysection{Oceanarium Class Reference}
+\hypertarget{class_oceanarium}{}\label{class_oceanarium}\index{Oceanarium@{Oceanarium}}
+
+
+Главный класс симуляции океанариума.  
+
+
+
+
+{\ttfamily \+\#include $<$Oceanarium.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_oceanarium_ac569a3c66e85460e8af37af8dca58b84}\label{class_oceanarium_ac569a3c66e85460e8af37af8dca58b84} 
+void {\bfseries add\+Aquarium} (std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_aquarium}{Aquarium}} $>$ aquarium)
+\begin{DoxyCompactList}\small\item\em Добавить аквариум \end{DoxyCompactList}\item 
+\Hypertarget{class_oceanarium_aa8a5b8371369743dd7128fe801390926}\label{class_oceanarium_aa8a5b8371369743dd7128fe801390926} 
+int {\bfseries get\+Aquarium\+Count} () const
+\begin{DoxyCompactList}\small\item\em Количество аквариумов \end{DoxyCompactList}\item 
+\Hypertarget{class_oceanarium_a2eeab27e95a4e7efed7a2648172d429e}\label{class_oceanarium_a2eeab27e95a4e7efed7a2648172d429e} 
+\doxymbox{\hyperlink{class_aquarium}{Aquarium}} \& {\bfseries get\+Aquarium} (int index) const
+\begin{DoxyCompactList}\small\item\em Получить аквариум \end{DoxyCompactList}\item 
+\Hypertarget{class_oceanarium_a59815788b4a131749ba0b7f04658a1cc}\label{class_oceanarium_a59815788b4a131749ba0b7f04658a1cc} 
+void {\bfseries start\+Simulation} ()
+\begin{DoxyCompactList}\small\item\em Запуск симуляции \end{DoxyCompactList}\item 
+\Hypertarget{class_oceanarium_a7c5e4cff7137a3e97da9fe340b8d6e3c}\label{class_oceanarium_a7c5e4cff7137a3e97da9fe340b8d6e3c} 
+void {\bfseries stop\+Simulation} ()
+\begin{DoxyCompactList}\small\item\em Остановка симуляции \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_oceanarium_a916caf01e672a62b0e2a32a45d47474f}\label{class_oceanarium_a916caf01e672a62b0e2a32a45d47474f} 
+void {\bfseries time\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Основной цикл симуляции времени \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_oceanarium_abab2134f222be1f3e9315a0428938d02}\label{class_oceanarium_abab2134f222be1f3e9315a0428938d02} 
+std::\+vector$<$ std::\+unique\+\_\+ptr$<$ \doxymbox{\hyperlink{class_aquarium}{Aquarium}} $>$ $>$ {\bfseries aquariums}
+\item 
+\Hypertarget{class_oceanarium_a9784744db7c98433ab8c1ccdddfddd8d}\label{class_oceanarium_a9784744db7c98433ab8c1ccdddfddd8d} 
+std::\+thread {\bfseries time\+Thread}
+\item 
+\Hypertarget{class_oceanarium_a3864fd551d9e6d36cf4bc8481da3996f}\label{class_oceanarium_a3864fd551d9e6d36cf4bc8481da3996f} 
+std::\+atomic$<$ bool $>$ {\bfseries running} \{false\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Главный класс симуляции океанариума. 
+
+Управляет аквариумами и глобальной симуляцией времени. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Oceanarium.\+h\item 
+src/\+Oceanarium.\+cpp\end{DoxyCompactItemize}
