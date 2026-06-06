@@ -18,7 +18,7 @@
 
 int main() {
   Oceanarium oceanarium;
-
+  oceanarium.startSimulation();
   while (true) {
     try {
       std::cout << "\n===== Oceanarium Menu =====\n";
@@ -34,6 +34,7 @@ int main() {
 
       if (choice == 0) {
         std::cout << "Exiting...\n";
+        oceanarium.stopSimulation();
         break;
       }
 

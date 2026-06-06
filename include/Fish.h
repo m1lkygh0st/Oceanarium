@@ -14,21 +14,19 @@ protected:
   bool alive;
 
 public:
-  Fish(std::string species, int age, std::string gender, int appetite, int health);
-
+  Fish(std::string species, int age, std::string gender, int appetite,
+       int health);
   virtual ~Fish() = default;
 
-  [[nodiscard]] std::string getSpecies() const;
+  [[nodiscard]] const std::string &getSpecies() const;
   [[nodiscard]] int getAge() const;
-  [[nodiscard]] std::string getGender() const;
+  [[nodiscard]] const std::string &getGender() const;
   [[nodiscard]] int getAppetite() const;
   [[nodiscard]] int getHealth() const;
   [[nodiscard]] bool isAlive() const;
 
-  virtual void increaseAppetite(int value);
-  virtual void decreaseHealth(int value);
-
-  void kill();
+  void feed(int food);
+  void tickDay();
 
   virtual void printInfo() const;
 };

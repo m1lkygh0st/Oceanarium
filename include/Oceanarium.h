@@ -1,23 +1,27 @@
-#ifndef OCEANARIUM_H
-#define OCEANARIUM_H
+#pragma once
+#include <atomic>
+#include <memory>
+#include <thread>
+#include <vector>
 
 #include "Aquarium.h"
-#include <memory>
-#include <vector>
 
 class Oceanarium {
   std::vector<std::unique_ptr<Aquarium>> aquariums;
+
+  std::thread timeThread;
+  std::atomic<bool> running{false};
+
+  void timeLoop() const;
 
 public:
   void addAquarium(std::unique_ptr<Aquarium> aquarium);
 
   [[nodiscard]] int getAquariumCount() const;
+  [[nodiscard]] Aquarium &getAquarium(int index) const;
 
-  Aquarium &getAquarium(int index);
-  [[nodiscard]] const Aquarium &getAquarium(int index) const;
+  void startSimulation();
+  void stopSimulation();
 
-  [[nodiscard]] const std::vector<std::unique_ptr<Aquarium>> &
-  getAquariums() const;
+  ~Oceanarium();
 };
-
-#endif

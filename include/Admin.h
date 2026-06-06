@@ -5,7 +5,7 @@
 
 class Admin : public Worker {
 public:
-  Admin(const std::string &name, int age, const std::string &gender);
+  Admin(std::string name, int age, std::string gender);
 
   void giveBreak(Worker &worker, int days) const;
   void printInfo() const override;

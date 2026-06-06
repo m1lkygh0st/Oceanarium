@@ -1,20 +1,17 @@
 #include "Admin.h"
-
 #include <iostream>
 
-Admin::Admin(const std::string &name, const int age, const std::string &gender)
-    : Worker(name, age, gender) {}
+Admin::Admin(std::string name, const int age, std::string gender)
+    : Worker(std::move(name), age, std::move(gender)) {}
 
 void Admin::giveBreak(Worker &worker, const int days) const {
-  worker.setUnavailableDays(days);
+  worker.setBreak(days);
 
-  std::cout << "Admin " << getName() << " gave " << worker.getName()
-            << " a break for " << days << " day(s).\n";
+  std::cout << "Admin " << name << " gave break " << days << " days to "
+            << worker.getName() << "\n";
 }
 
 void Admin::printInfo() const {
-  std::cout << "[ADMIN] "
-            << "Name: " << getName() << ", Age: " << getAge()
-            << ", Gender: " << getGender()
-            << ", Status: " << (isActive() ? "Active" : "Inactive") << '\n';
+  std::cout << "[ADMIN] ";
+  Worker::printInfo();
 }

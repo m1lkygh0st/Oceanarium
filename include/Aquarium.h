@@ -14,19 +14,17 @@ class Aquarium {
 public:
   explicit Aquarium(int number);
 
-  [[nodiscard]] int getNumber() const;
   void addFish(std::unique_ptr<Fish> fish);
-  [[nodiscard]] int getFishCount() const;
-  [[nodiscard]] Fish &getFish(int index) const;
-  [[nodiscard]] const std::vector<std::unique_ptr<Fish>> &getFishes() const;
-
   void addWorker(std::unique_ptr<Worker> worker);
+  [[nodiscard]] Fish &getFish(int index) const;
+  [[nodiscard]] int getFishCount() const;
   [[nodiscard]] int getWorkerCount() const;
+  [[nodiscard]] int getNumber() const;
+
   [[nodiscard]] Worker &getWorker(int index) const;
-  [[nodiscard]] const std::vector<std::unique_ptr<Worker>> &getWorkers() const;
 
   void feedFishByWorker(const Worker &worker) const;
-
+  void tickDay() const;
   void printInfo() const;
 };
 

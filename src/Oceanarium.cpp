@@ -1,5 +1,6 @@
 #include "Oceanarium.h"
-#include <stdexcept>
+#include <chrono>
+#include <iostream>
 
 void Oceanarium::addAquarium(std::unique_ptr<Aquarium> aquarium) {
   aquariums.push_back(std::move(aquarium));
@@ -9,20 +10,37 @@ int Oceanarium::getAquariumCount() const {
   return static_cast<int>(aquariums.size());
 }
 
-Aquarium &Oceanarium::getAquarium(const int index) {
-  if (index < 0 || index >= getAquariumCount())
-    throw std::out_of_range("Invalid aquarium index");
-
+Aquarium &Oceanarium::getAquarium(const int index) const {
   return *aquariums.at(index);
 }
 
-const Aquarium &Oceanarium::getAquarium(const int index) const {
-  if (index < 0 || index >= getAquariumCount())
-    throw std::out_of_range("Invalid aquarium index");
+void Oceanarium::startSimulation() {
+  if (running)
+    return;
 
-  return *aquariums.at(index);
+  running = true;
+  timeThread = std::thread(&Oceanarium::timeLoop, this);
 }
 
-const std::vector<std::unique_ptr<Aquarium>> &Oceanarium::getAquariums() const {
-  return aquariums;
+void Oceanarium::stopSimulation() {
+  running = false;
+
+  if (timeThread.joinable())
+    timeThread.join();
+}
+
+Oceanarium::~Oceanarium() { stopSimulation(); }
+
+void Oceanarium::timeLoop() const {
+  using namespace std::chrono_literals;
+
+  while (running) {
+    std::this_thread::sleep_for(10s);
+
+    for (auto &aq : aquariums) {
+      aq->tickDay();
+    }
+
+    std::cout << "\n[SIMULATION] 10 seconds passed: fish appetite decreased!\n";
+  }
 }
